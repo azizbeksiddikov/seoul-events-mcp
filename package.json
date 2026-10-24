@@ -1,0 +1,56 @@
+{
+  "name": "seoul-events-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for current events in Seoul for English speakers: meetups, tech talks, concerts, exhibitions and festivals (Eventify + Seoul Open Data).",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "eval": "tsx eval/run.ts",
+    "eval:live": "tsx eval/run.ts --live",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "seoul",
+    "korea",
+    "events",
+    "claude",
+    "foreigners",
+    "expats"
+  ],
+  "author": "Azizbek Siddikov",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "5.9",
+    "vitest": "^4.1.12"
+  },
+  "bin": {
+    "seoul-events-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azizbeksiddikov/seoul-events-mcp.git"
+  }
+}
